@@ -35,29 +35,6 @@ body {
                 }
             }
         }
-        
-        .follow-links{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin: 8px;
-    
-            svg {
-                color: rgb(255, 255, 255);
-                width: 30px;
-                height: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 7.5px;
-                cursor: pointer;
-                transition: 0.3s;
-    
-                &:hover {
-                    color: red;
-                }
-            }
-        }
     
         .top-header {
             display: flex;
@@ -79,10 +56,10 @@ body {
                     gap: 5px;
 
                     div {
-                        width: 30px;
-                        height: 30px;
+                        width: 35px;
+                        height: 35px;
                         background-color: white;
-                        border-radius: 15px;
+                        border-radius: 35px;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
@@ -170,7 +147,6 @@ body {
             .menu {
                 display: flex;
                 transition: 0.3s;
-                gap: 3px;
     
                 @include mobile(){
                     position: absolute;
@@ -180,7 +156,6 @@ body {
                     width: 50%;
                     background-color: #F52C2F;
                     z-index: 100;
-                    gap: 0;
                 }
     
                 li {
@@ -402,7 +377,7 @@ body {
             padding: 30px;
 
             @include mobile(){
-                padding: 0px;
+                padding: 10px;
             }
     
             .container {
@@ -475,10 +450,6 @@ body {
                    p {
                     color: black;
                     padding: 10px 0;
-
-                    @include mobile(){
-                        padding: 10px;
-                    }
                    }
 
                    video, iframe {
@@ -556,16 +527,12 @@ body {
         padding: 30px;
 
         @include mobile(){
-            padding: 0;
+            padding: 10px;
         }
 
         .page-title {
             font-size: x-large;
-            padding: 10px 0;
-
-            @include mobile(){
-                padding: 10px;
-            }
+            padding: 0 0 10px 0;
         }
 
         .container {
@@ -762,7 +729,7 @@ body {
     
             form {
                 display: flex;
-                gap: 4px;
+                gap: 5px;
     
                 input {
                     padding: 5px;
@@ -800,10 +767,10 @@ body {
             gap: 5px;
 
             div {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
                 background-color: white;
-                border-radius: 15px;
+                border-radius: 35px;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
