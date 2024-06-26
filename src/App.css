@@ -555,7 +555,7 @@ body .blog .container .categories .active {
 }
 body .blog .container .categories .category-list {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   gap: 5px;
 }
 body .blog .container .categories .new-post {
@@ -572,7 +572,7 @@ body .blog .container .wrapper {
   display: flex;
   align-items: center;
   gap: 7.5px;
-  overflow-x: scroll;
+  overflow-x: hidden;
   background-color: #F52C2F;
   padding: 10px;
 }
@@ -664,7 +664,7 @@ body .newsletter {
   padding: 50px 30px;
   display: flex;
   position: relative;
-  background: url("./assets/images/D-Berry/5.jpg");
+  background: url("./components/newsletter/images/D-Berry2.jpg");
   background-size: cover;
   background-position: center;
 }

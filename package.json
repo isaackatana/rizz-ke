@@ -33,8 +33,19 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
     "sass": "^1.71.1",
-    "tailwindcss": "^3.4.3",
     "vite": "^5.2.9",
     "vite-plugin-react": "^4.0.1"
+  },
+  "description": "",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaackatana/rizz-news-media.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaackatana/rizz-news-media/issues"
   }
 }

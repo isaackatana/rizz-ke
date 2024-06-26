@@ -1,15 +1,15 @@
 import './App.css'
 import Header from './components/Header'
-import Newsletter from './components/Newsletter'
+import Newsletter from './components/newsletter/Newsletter'
 import Footer from './components/Footer'
 
 import { Routes, Route } from 'react-router-dom'
 import NotFoundPage from './pages/NotFoundPage'
-import Home from './pages/Home'
+import Home from './pages/home/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
-import PostContainer from './components/Blog/BlogContainer'
-import NewBlog from './components/Blog/NewBlog'
+import BlogContainer from './components/blog/BlogContainer'
+import NewBlog from './components/blog/NewBlog'
 
 function App() {
 
@@ -19,12 +19,12 @@ function App() {
       <main>
         <Routes>
           <Route path='*' element={<NotFoundPage/>} />
-          <Route path='/' element={<Home/>} />
-          <Route path='/contact' element={<Contact/>} />
-          <Route path='/about' element={<About/>} />
+          <Route path='/rizz-news-media' element={<Home/>} />
+          <Route path='/rizz-news-media/contact' element={<Contact/>} />
+          <Route path='/rizz-news-media/about' element={<About/>} />
 
-          <Route path='/news/blog-container' element={<PostContainer/>}/>
-          <Route path='/news/new-blog' element={<NewBlog/>}/>
+          <Route path='/rizz-news-media/news/blog-container' element={<BlogContainer/>}/>
+          <Route path='/rizz-news-media/news/new-blog' element={<NewBlog/>}/>
         </Routes>
       </main>
       <Newsletter/>

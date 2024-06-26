@@ -12,7 +12,7 @@ function Footer() {
           <div><FontAwesomeIcon icon={faYoutube}/></div>
         </div>
         <div>
-            <p>2024 RiZz News Media</p><p>| Hi, Isaac <a href="" onclick="alert('Hello Isaac')">Logout</a></p>
+            <p>©2024 RiZz News Media</p><p>| Hi, Admin <a href="" onclick="alert('Hello Isaac')">Logout</a></p>
         </div>
     </footer>
   )
