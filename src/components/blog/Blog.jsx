@@ -5,8 +5,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import DBerry2 from './images/D-Berry2.jpg'
-import NewBlog from './NewBlog'
-import EditBlog from './EditBlog'
 
 function Blog(props) {
     const [blogs, setBlogs] = useState([
@@ -17,6 +15,18 @@ function Blog(props) {
             id: 1
         },
     ])
+
+    const [NewBlogModal, setNewBlogModal] = useState(false);
+
+    const toggleNewBlogModal = ()=>{
+        setNewBlogModal(!NewBlogModal)
+    }
+
+    if (NewBlogModal){
+        document.body.classList.add('active')
+    } else {
+        document.body.classList.remove('active')
+    }
 
   return (
     <>
@@ -33,7 +43,7 @@ function Blog(props) {
                 </div>
 
                 <div className="new-post">
-                    <Link to='/rizz-news-media/news/new-blog'><FontAwesomeIcon icon={faAdd}/></Link>
+                    <Link onClick={toggleNewBlogModal}><FontAwesomeIcon icon={faAdd}/></Link>
                 </div>
             </div>
             <div className="wrapper">
@@ -44,9 +54,27 @@ function Blog(props) {
             </div>
         </div>
     </div>
-
-    <NewBlog/>
-    <EditBlog/>
+    {NewBlogModal &&(
+        <div className="new-blog">
+            <div className="container">
+                <h1>New Article</h1>
+                <form action="/new/new-blog" method='POST'>
+                    <div>
+                        <label htmlFor="">Title</label>
+                        <input type="text" name="" id="" required/>
+                    </div>
+                    <div>
+                        <label htmlFor="">Markdown</label>
+                        <textarea name="" id="" required></textarea>
+                    </div>
+                    <div className='action'>
+                        <button onClick={toggleNewBlogModal}>Cancel</button>
+                        <button>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    )}
     </>
   )
 }

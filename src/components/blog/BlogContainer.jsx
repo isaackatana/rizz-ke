@@ -5,7 +5,7 @@ import BlogPreview from './Blog'
 
 import DBerry from './images/D-Berry2.jpg'
 
-function BlogContainer(props) {
+function BlogContainer() {
   return (
     <>
     <div className='blog-container'>

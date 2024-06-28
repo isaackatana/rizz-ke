@@ -160,11 +160,12 @@ body {
                 @include mobile(){
                     position: fixed;
                     top: 65.95px;
-                    right: -100%;
+                    right: 0;
                     flex-direction: column;
                     width: 50%;
                     background-color: #F52C2F;
                     z-index: 100;
+                    transform: translateX(100%);
                 }
     
                 li {
@@ -591,10 +592,10 @@ body {
         display: flex;
         flex-direction: column;
         background-color: rgb(197, 196, 196);
-        padding: 30px;
+        padding: 0 30px 30px;
 
         @include mobile(){
-            padding: 10px;
+            padding: 0px;
         }
 
         .container {
@@ -667,6 +668,10 @@ body {
                 p {
                     color: black;
                     padding: 10px 0;
+
+                    @include mobile(){
+                        padding: 10px;
+                    }
                 }
 
                 video, iframe {
@@ -703,6 +708,7 @@ body {
 
                 @include mobile(){
                     border-radius: 0;
+                    margin: 0 10px 10px;
                 }
 
                 div {
@@ -748,7 +754,7 @@ body {
     .new-blog {
         width: 100vw;
         height: 100vh;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         position: fixed;
@@ -817,7 +823,7 @@ body {
     .edit-blog {
         width: 100vw;
         height: 100vh;
-        display: none;
+        display:flex;
         align-items: center;
         justify-content: center;
         position: fixed;
@@ -827,7 +833,7 @@ body {
 
         .container {
             width: 390px;
-            background-color: #F52C2F;
+            background-color: #383838;
             padding: 10px;
             border-radius: 10px;
 
@@ -1002,7 +1008,7 @@ body {
         inset: 0;
         z-index: 100;
         background-color: rgba(0, 0, 0, 0.7);
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
     
@@ -1015,6 +1021,16 @@ body {
             display: flex;
             flex-direction: column;
             gap: 6px;
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+            }
     
             h1 {
                 font-size: large;
@@ -1066,9 +1082,13 @@ body {
         }
     
         .register {
-            display: flex;
+            display: none;
         }
     }
+}
+
+.active {
+    overflow-y: 0;
 }
 
 // ..................
