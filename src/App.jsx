@@ -9,7 +9,6 @@ import Home from './pages/home/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import BlogContainer from './components/blog/BlogContainer'
-import NewBlog from './components/blog/NewBlog'
 
 function App() {
 
@@ -24,7 +23,6 @@ function App() {
           <Route path='/rizz-news-media/about' element={<About/>} />
 
           <Route path='/rizz-news-media/news/blog-container' element={<BlogContainer/>}/>
-          <Route path='/rizz-news-media/news/new-blog' element={<NewBlog/>}/>
         </Routes>
       </main>
       <Newsletter/>

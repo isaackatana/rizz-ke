@@ -1,7 +1,7 @@
 import Blog from "../../components/blog/Blog"
 
 import DBerry2 from './images/D-Berry2.jpg'
-import IntroVideo from './media/Comp 2.mov'
+import IntroVideo from './media/RiZz Media (Intro Video).mp4'
 
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
         <div className='hero'>
             <img src={DBerry2} alt=""/>
             <div>
-                <video src={IntroVideo} controls loop></video>
+                <video src={IntroVideo} controls></video>
             </div>
         </div>
     </div>

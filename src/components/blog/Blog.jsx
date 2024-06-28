@@ -5,6 +5,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import DBerry2 from './images/D-Berry2.jpg'
+import NewBlog from './NewBlog'
+import EditBlog from './EditBlog'
 
 function Blog(props) {
     const [blogs, setBlogs] = useState([
@@ -17,6 +19,7 @@ function Blog(props) {
     ])
 
   return (
+    <>
     <div className='blog'>
         <h1  className="page-title">News</h1>
         <div className='container'>
@@ -30,7 +33,7 @@ function Blog(props) {
                 </div>
 
                 <div className="new-post">
-                    <Link to='/news/new-blog'><FontAwesomeIcon icon={faAdd}/></Link>
+                    <Link to='/rizz-news-media/news/new-blog'><FontAwesomeIcon icon={faAdd}/></Link>
                 </div>
             </div>
             <div className="wrapper">
@@ -41,6 +44,10 @@ function Blog(props) {
             </div>
         </div>
     </div>
+
+    <NewBlog/>
+    <EditBlog/>
+    </>
   )
 }
 

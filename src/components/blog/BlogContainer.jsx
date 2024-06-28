@@ -1,7 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import Blog from './Blog'
+import BlogPreview from './Blog'
+
+import DBerry from './images/D-Berry2.jpg'
 
 function BlogContainer(props) {
   return (
@@ -10,10 +12,10 @@ function BlogContainer(props) {
         <div className='container'>
             <div className="blog-content">
                 <div className="blog-header">
-                    <img src='' alt=""/>
+                    <img src={DBerry} alt=""/>
                     <div className="blog-title">
                         <h2>Kenyan music is busting with fresh talents </h2>
-                        <p>Just now</p>
+                        <p>6/27/2024</p>
                     </div>
                 </div>
 
@@ -36,7 +38,7 @@ function BlogContainer(props) {
             </div>
         </div>
     </div>
-    <Blog/>
+    <BlogPreview/>
     </>
   )
 }
