@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight, faAdd, faEdit, faRemove } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faAdd, faEdit, faRemove, faSave, faXmark } from '@fortawesome/free-solid-svg-icons'
 import BlogList from './BlogList'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -8,6 +8,24 @@ import DBerry1 from './images/D-Berry1.jpg'
 
 function Blog(props) {
     const [blogs, setBlogs] = useState([
+        {
+            img: `${DBerry1}`,
+            title: 'Kenyan music is busting with fresh talents from the coast',
+            CreatedAt: new Date(),
+            id: 1
+        },
+        {
+            img: `${DBerry1}`,
+            title: 'Kenyan music is busting with fresh talents from the coast',
+            CreatedAt: new Date(),
+            id: 1
+        },
+        {
+            img: `${DBerry1}`,
+            title: 'Kenyan music is busting with fresh talents from the coast',
+            CreatedAt: new Date(),
+            id: 1
+        },
         {
             img: `${DBerry1}`,
             title: 'Kenyan music is busting with fresh talents from the coast',
@@ -27,6 +45,8 @@ function Blog(props) {
     } else {
         document.body.classList.remove('active')
     }
+
+    // blog Slide
 
   return (
     <>
@@ -67,8 +87,8 @@ function Blog(props) {
                         <textarea name="" id="" placeholder='Markdown'required></textarea>
                     </div>
                     <div className='action'>
-                        <button onClick={toggleNewBlogModal}>Cancel</button>
-                        <button>Save</button>
+                        <button onClick={toggleNewBlogModal}><FontAwesomeIcon icon={faXmark}/></button>
+                        <button><FontAwesomeIcon icon={faSave}/></button>
                     </div>
                 </form>
             </div>
