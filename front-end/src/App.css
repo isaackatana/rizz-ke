@@ -51,7 +51,7 @@ body header .top-header {
 }
 @media (max-width: 425px) {
   body header .top-header {
-    padding: 10px 15px;
+    padding: 10px;
   }
 }
 body header .top-header .wrapper {
@@ -91,7 +91,7 @@ body header .top-header .nav .user-profile {
   align-items: center;
   gap: 10px;
 }
-body header .top-header .nav .user-profile div {
+body header .top-header .nav .user-profile a {
   background-color: #F52C2F;
   width: 45px;
   height: 45px;
@@ -101,7 +101,7 @@ body header .top-header .nav .user-profile div {
   align-items: center;
   justify-content: center;
 }
-body header .top-header .nav .user-profile div svg {
+body header .top-header .nav .user-profile a svg {
   color: white;
   font-size: 20px;
 }
@@ -369,6 +369,146 @@ body main .about h1 {
   margin-bottom: 15px;
   font-size: x-large;
 }
+body main .dashboard {
+  padding: 30px;
+}
+body main .dashboard .container {
+  display: flex;
+}
+body main .dashboard .container .edit-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .dashboard .container .edit-blog .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+}
+body main .dashboard .container .edit-blog .container {
+  width: 390px;
+  background-color: #383838;
+  padding: 10px;
+  border-radius: 10px;
+}
+@media (max-width: 425px) {
+  body main .dashboard .container .edit-blog .container {
+    width: 290px;
+  }
+}
+body main .dashboard .container .edit-blog .container h1 {
+  font-size: large;
+  color: white;
+  margin-bottom: 5px;
+}
+body main .dashboard .container .edit-blog .container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 5px;
+}
+body main .dashboard .container .edit-blog .container form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+body main .dashboard .container .edit-blog .container form div input {
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+body main .dashboard .container .edit-blog .container form div textarea {
+  padding: 10px;
+  height: 108px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+body main .dashboard .container .edit-blog .container form .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body main .dashboard .container .edit-blog .container form .action button {
+  border: solid black 1px;
+  padding: 8px;
+  border-radius: 5px;
+}
+body main .dashboard .container .edit-blog .container form .action button svg {
+  font-size: large;
+}
+body main .dashboard .container .new-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .dashboard .container .new-blog .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  cursor: pointer;
+}
+body main .dashboard .container .new-blog .container {
+  width: 390px;
+  background-color: #F52C2F;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 101;
+}
+@media (max-width: 425px) {
+  body main .dashboard .container .new-blog .container {
+    width: 290px;
+  }
+}
+body main .dashboard .container .new-blog .container h1 {
+  font-size: large;
+  color: white;
+  margin-bottom: 5px;
+}
+body main .dashboard .container .new-blog .container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 5px;
+}
+body main .dashboard .container .new-blog .container form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+body main .dashboard .container .new-blog .container form div input {
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+body main .dashboard .container .new-blog .container form div textarea {
+  padding: 10px;
+  height: 108px;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+body main .dashboard .container .new-blog .container form .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body main .dashboard .container .new-blog .container form .action button {
+  border: solid black 1px;
+  padding: 8px;
+  border-radius: 5px;
+}
+body main .dashboard .container .new-blog .container form .action button svg {
+  font-size: large;
+}
+body main .dashboard .container .new-post a {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  padding: 5px;
+  border: solid black 1px;
+}
 body .blog {
   padding: 30px;
 }
@@ -419,17 +559,6 @@ body .blog .container .categories .category-list {
   display: flex;
   overflow-x: hidden;
   gap: 5px;
-}
-body .blog .container .categories .new-post {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-body .blog .container .categories .new-post a {
-  width: 60px;
-  padding: 5px;
-  border: solid black 1px;
 }
 body .blog .container .wrapper {
   display: flex;
@@ -541,19 +670,19 @@ body .blog .container .wrapper .post .edit-post button:hover {
   color: white;
 }
 body .blog-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: rgb(197, 196, 196);
   padding: 0 30px 30px;
 }
 @media (max-width: 425px) {
   body .blog-container {
     padding: 0px;
+    grid-template-columns: 1fr;
   }
 }
 body .blog-container .container {
   background-color: rgb(197, 196, 196);
-  width: 50vw;
 }
 @media (max-width: 425px) {
   body .blog-container .container {
@@ -666,13 +795,13 @@ body .blog-container .container .share-post div h3 {
 }
 body .blog-container .container .share-post div .wrapper {
   display: flex;
-  gap: 3px;
+  gap: 5px;
 }
 body .blog-container .container .share-post div .wrapper div {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: #383838;
-  border-radius: 15px;
+  border-radius: 35px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -686,132 +815,56 @@ body .blog-container .container .share-post div .wrapper div:active {
   background-color: gray;
   color: white;
 }
-body .new-blog {
+body .blog-container .container .comments {
+  padding: 10px 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  z-index: 101;
+  flex-direction: column;
+  gap: 10px;
 }
-body .new-blog .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  inset: 0;
-  cursor: pointer;
+@media (max-width: 425px) {
+  body .blog-container .container .comments {
+    padding: 10px;
+  }
 }
-body .new-blog .container {
-  width: 390px;
+body .blog-container .container .comments .comment-input h1 {
+  margin-bottom: 5px;
+}
+body .blog-container .container .comments .comment-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .blog-container .container .comments .comment-input form textarea {
+  width: auto;
+  padding: 10px;
+}
+body .blog-container .container .comments .comment-input form div {
+  display: flex;
+  justify-content: space-between;
+}
+body .blog-container .container .comments .comment-input form div button {
+  width: 100px;
+  padding: 10px;
+}
+body .blog-container .container .comments .comments-display {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body .blog-container .container .comments .comments-display .user-comment {
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+body .blog-container .container .comments .comments-display .user-comment .pp svg {
+  width: 30px;
+  height: 30px;
+  color: white;
   background-color: #F52C2F;
   padding: 10px;
-  border-radius: 10px;
-  z-index: 101;
-}
-@media (max-width: 425px) {
-  body .new-blog .container {
-    width: 290px;
-  }
-}
-body .new-blog .container h1 {
-  font-size: large;
-  color: white;
-  margin-bottom: 5px;
-}
-body .new-blog .container form {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  gap: 5px;
-}
-body .new-blog .container form div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 5px;
-}
-body .new-blog .container form div input {
-  padding: 10px;
-  border: solid black 1px;
-  border-radius: 5px;
-}
-body .new-blog .container form div textarea {
-  padding: 10px;
-  height: 108px;
-  border: solid black 1px;
-  border-radius: 5px;
-}
-body .new-blog .container form .action {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-body .new-blog .container form .action button {
-  border: solid black 1px;
-  padding: 8px;
-  border-radius: 5px;
-}
-body .edit-blog {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  z-index: 101;
-}
-body .edit-blog .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  inset: 0;
-  cursor: pointer;
-}
-body .edit-blog .container {
-  width: 390px;
-  background-color: #383838;
-  padding: 10px;
-  border-radius: 10px;
-}
-@media (max-width: 425px) {
-  body .edit-blog .container {
-    width: 290px;
-  }
-}
-body .edit-blog .container h1 {
-  font-size: large;
-  color: white;
-  margin-bottom: 5px;
-}
-body .edit-blog .container form {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  gap: 5px;
-}
-body .edit-blog .container form div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 5px;
-}
-body .edit-blog .container form div input {
-  padding: 10px;
-  border: solid black 1px;
-  border-radius: 5px;
-}
-body .edit-blog .container form div textarea {
-  padding: 10px;
-  height: 108px;
-  border: solid black 1px;
-  border-radius: 5px;
-}
-body .edit-blog .container form .action {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-body .edit-blog .container form .action button {
-  border: solid black 1px;
-  padding: 8px;
-  border-radius: 5px;
+  border-radius: 30px;
 }
 body .newsletter {
   padding: 50px 30px;

@@ -45,7 +45,7 @@ function Footer() {
             </div>
           </form>
           <div className='switch'>
-            <p>Don't have an account</p><a href="/register">Register</a>
+            <p>Don't have an account</p><a href="#">Register</a>
           </div>
         </div>
         <div className="register">

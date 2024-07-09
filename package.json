@@ -1,0 +1,27 @@
+{
+  "name": "rizz-news-media",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaackatana/rizz-news-media.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaackatana/rizz-news-media/issues"
+  },
+  "homepage": "https://github.com/isaackatana/rizz-news-media#readme",
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

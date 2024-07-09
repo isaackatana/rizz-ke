@@ -43,7 +43,7 @@ body {
             background-color: #383838;
     
             @include mobile(){
-                padding: 10px 15px;
+                padding: 10px;
             }
 
             .wrapper {
@@ -88,7 +88,7 @@ body {
                     align-items: center;
                     gap: 10px;
 
-                    div {
+                    a {
                         background-color: #F52C2F;
                         width: 45px;
                         height: 45px;
@@ -408,6 +408,175 @@ body {
                 font-size: x-large;
             }
         }
+
+        .dashboard {
+            padding: 30px;
+            
+            .container {
+                display: flex;
+
+                .edit-blog {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    .overlay {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        position: fixed;
+                        inset: 0;
+                        cursor: pointer;
+                    }
+            
+                    .container {
+                        width: 390px;
+                        background-color: #383838;
+                        padding: 10px;
+                        border-radius: 10px;
+            
+                        @include mobile(){
+                            width: 290px;
+                        }
+            
+                        h1 {
+                            font-size: large;
+                            color: white;
+                            margin-bottom: 5px;
+                        }
+            
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            color: white;
+                            gap: 5px;
+                
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 5px;
+                
+                                input {
+                                    padding: 10px;
+                                    border: solid black 1px;
+                                    border-radius: 5px;
+                                }
+                            }
+                
+                            div {
+                                textarea {
+                                    padding: 10px;
+                                    height: 108px;
+                                    border: solid black 1px;
+                                    border-radius: 5px;
+                                }
+                            }
+            
+                            .action {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+            
+                                button {
+                                    border: solid black 1px;
+                                    padding: 8px;
+                                    border-radius: 5px;
+            
+                                    svg {
+                                        font-size: large;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .new-blog {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+            
+                    .overlay {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        position: fixed;
+                        inset: 0;
+                        cursor: pointer;
+                    }
+            
+                    .container {
+                        width: 390px;
+                        background-color: #F52C2F;
+                        padding: 10px;
+                        border-radius: 10px;
+                        z-index: 101;
+            
+                        @include mobile(){
+                            width: 290px;
+                        }
+            
+                        h1 {
+                            font-size: large;
+                            color: white;
+                            margin-bottom: 5px;
+                        }
+            
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            color: white;
+                            gap: 5px;
+                
+                            div {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 5px;
+                
+                                input {
+                                    padding: 10px;
+                                    border: solid black 1px;
+                                    border-radius: 5px;
+                                }
+                            }
+                
+                            div {
+                                textarea {
+                                    padding: 10px;
+                                    height: 108px;
+                                    border: solid black 1px;
+                                    border-radius: 5px;
+                                }
+                            }
+            
+                            .action {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+            
+                                button {
+                                    border: solid black 1px;
+                                    padding: 8px;
+                                    border-radius: 5px;
+            
+                                    svg {
+                                        font-size: large;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .new-post {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        width: 60px;
+                        padding: 5px;
+                        border: solid black 1px;
+                    }
+                }
+                
+            }
+        }
     }
 
     // Blog ................
@@ -464,19 +633,6 @@ body {
                     display: flex;
                     overflow-x: hidden;
                     gap: 5px;
-                }
-
-                .new-post {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-
-                    a {
-                        width: 60px;
-                        padding: 5px;
-                        border: solid black 1px;
-                    }
                 }
             }
 
@@ -612,18 +768,18 @@ body {
     }
 
     .blog-container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: rgb(197, 196, 196);
         padding: 0 30px 30px;
 
         @include mobile(){
             padding: 0px;
+            grid-template-columns: 1fr;
         }
 
         .container {
             background-color: rgb(197, 196, 196);
-            width: 50vw;
 
             @include mobile(){
                 width: 100%;
@@ -740,13 +896,13 @@ body {
 
                     .wrapper {
                         display: flex;
-                        gap: 3px;
+                        gap: 5px;
 
                         div {
-                            width: 30px;
-                            height: 30px;
+                            width: 35px;
+                            height: 35px;
                             background-color: #383838;
-                            border-radius: 15px;
+                            border-radius: 35px;
                             cursor: pointer;
                             display: flex;
                             align-items: center;
@@ -765,155 +921,75 @@ body {
                     }
                 }
             }
-        }
 
-    }
-
-    .new-blog {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        inset: 0;
-        z-index: 101;
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: fixed;
-            inset: 0;
-            cursor: pointer;
-        }
-
-        .container {
-            width: 390px;
-            background-color: #F52C2F;
-            padding: 10px;
-            border-radius: 10px;
-            z-index: 101;
-
-            @include mobile(){
-                width: 290px;
-            }
-
-            h1 {
-                font-size: large;
-                color: white;
-                margin-bottom: 5px;
-            }
-
-            form {
+            .comments {
+                padding: 10px 0;
                 display: flex;
                 flex-direction: column;
-                color: white;
-                gap: 5px;
+                gap: 10px;
+
+                @include mobile(){
+                    
+                padding: 10px;
+                }
     
-                div {
+                .comment-input {
+                    
+                    h1 {
+                        margin-bottom: 5px;
+                    }
+    
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+    
+                        textarea {
+                            width: auto;
+                            padding: 10px;
+                        }
+                        div {
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            button {
+                                width: 100px;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+    
+                .comments-display {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
                     gap: 5px;
+                
     
-                    input {
+                    .user-comment {
+                        background-color: rgb(235, 235, 235);
                         padding: 10px;
-                        border: solid black 1px;
-                        border-radius: 5px;
-                    }
-                }
+                        display: flex;
+                        align-items: start;
+                        gap: 10px;
     
-                div {
-                    textarea {
-                        padding: 10px;
-                        height: 108px;
-                        border: solid black 1px;
-                        border-radius: 5px;
-                    }
-                }
-
-                .action {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    button {
-                        border: solid black 1px;
-                        padding: 8px;
-                        border-radius: 5px;
+                        .pp {
+                            svg {
+                                width: 30px;
+                                height: 30px;
+                                color: white;
+                                background-color: #F52C2F;
+                                padding: 10px;
+                                border-radius: 30px;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-    
-    .edit-blog {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        inset: 0;
-        z-index: 101;
+
         
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: fixed;
-            inset: 0;
-            cursor: pointer;
-        }
 
-        .container {
-            width: 390px;
-            background-color: #383838;
-            padding: 10px;
-            border-radius: 10px;
-
-            @include mobile(){
-                width: 290px;
-            }
-
-            h1 {
-                font-size: large;
-                color: white;
-                margin-bottom: 5px;
-            }
-
-            form {
-                display: flex;
-                flex-direction: column;
-                color: white;
-                gap: 5px;
-    
-                div {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    gap: 5px;
-    
-                    input {
-                        padding: 10px;
-                        border: solid black 1px;
-                        border-radius: 5px;
-                    }
-                }
-    
-                div {
-                    textarea {
-                        padding: 10px;
-                        height: 108px;
-                        border: solid black 1px;
-                        border-radius: 5px;
-                    }
-                }
-
-                .action {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    button {
-                        border: solid black 1px;
-                        padding: 8px;
-                        border-radius: 5px;
-                    }
-                }
-            }
-        }
     }
 
     // Newsletter ..............

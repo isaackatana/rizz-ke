@@ -18,15 +18,15 @@ function BlogList(props) {
         document.body.classList.remove('active')
     }
   
-  const blogs = props.blogs;
+    const blogs = props.blogs;
 
-  console.log(blogs)
+    console.log(blogs)
   return (
     <>
       {blogs.map((blog)=>(
         <div className="post"  key={blog.id}>
             <div className="thumbnail">
-                <img src={blog.img} alt=""/>
+                <img src={blog.Thumbnail} alt=""/>
                 <div className="time">
                     <p>{blog.CreatedAt.toLocaleDateString()}</p>
                 </div>

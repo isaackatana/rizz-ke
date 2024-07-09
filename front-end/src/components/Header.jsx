@@ -1,11 +1,24 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 import { Link, NavLink } from 'react-router-dom'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import Logo from '../assets/rizz-media-icon.svg'
 
 function Header() {
+
+    const [MenuBar, setMenuBar] = useState(false)
+
+    const toggleMenuBar =()=>{
+        setMenuBar(!MenuBar)
+    }
+
+    if (MenuBar){
+        document.body.classList.add('active')
+    } else {
+        document.body.classList.add('active')
+    }
 
   return (
     <header>
@@ -20,10 +33,10 @@ function Header() {
             </div>
             <div className="nav">
                 <div className="user-profile">
-                    <div><FontAwesomeIcon icon={faUser}/></div>
+                    <Link to={'/front-end/rizz-news-media/dashboard'}><FontAwesomeIcon icon={faUser}/></Link>
                 </div>
                 <div>
-                    <div className="burger" >
+                    <div className="burger" onClick={toggleMenuBar}>
                         <div className='line1'></div>
                         <div className='line2'></div>
                         <div className='line3'></div>

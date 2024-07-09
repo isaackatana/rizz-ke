@@ -9,8 +9,19 @@ import Home from './pages/home/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import BlogContainer from './components/blog/BlogContainer'
+import { useEffect } from 'react'
+import Dashboard from './pages/Dashboard'
 
 function App() {
+  const getUser =()=>{
+    fetch('/api/user')
+    .then (res=>res.json())
+    .then (json=>console.log(json))
+  }
+
+  useEffect(()=>{
+    getUser()
+  },[])
 
   return (
     <>
@@ -23,6 +34,7 @@ function App() {
           <Route path='/front-end/rizz-news-media/about' element={<About/>} />
 
           <Route path='/front-end/rizz-news-media/news/blog-container' element={<BlogContainer/>}/>
+          <Route path='/front-end/rizz-news-media/dashboard' element={<Dashboard/>}/>
         </Routes>
       </main>
       <Newsletter/>
