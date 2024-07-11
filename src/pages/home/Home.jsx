@@ -18,6 +18,7 @@ function Home() {
         <meta charSet="utf-8" />
         <title>Home | RiZz News Media</title>
         <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="News Updates on Music, Fashion, Lifestyle and Politics." />
     </Helmet>
     <div className="home">
         <div className='hero'>
