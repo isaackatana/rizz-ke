@@ -41,7 +41,7 @@ function BlogContainer() {
                 <div className='comment-input'>
                     <h1>Leave a comment</h1>
                     <form action="">
-                        <textarea name="" id="" placeholder='Comment...'></textarea>
+                        <textarea name="" id="" placeholder='Comment ...'></textarea>
                         <div>
                             <div></div>
                             <button>Post</button>

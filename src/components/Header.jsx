@@ -14,12 +14,6 @@ function Header() {
         setMenuBar(!MenuBar)
     }
 
-    if (MenuBar){
-        document.body.classList.add('active')
-    } else {
-        document.body.classList.add('active')
-    }
-
   return (
     <header>
         <div className="top-header">
@@ -45,7 +39,7 @@ function Header() {
             </div>
         </div>
         <nav>
-            <ul className="menu">
+            <ul className={`menu burger ${MenuBar ? 'menu-opened' : ''}`}>
                 <li><NavLink to='/front-end/rizz-news-media'>Home</NavLink></li>
                 <li><NavLink to='/front-end/rizz-news-media/contact'>Contact</NavLink></li>
                 <li><NavLink to='/front-end/rizz-news-media/about'>About</NavLink></li>

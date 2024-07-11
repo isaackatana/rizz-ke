@@ -9,19 +9,25 @@ import Home from './pages/home/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import BlogContainer from './components/blog/BlogContainer'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Dashboard from './pages/Dashboard'
 
 function App() {
-  const getUser =()=>{
-    fetch('/api/user')
-    .then (res=>res.json())
-    .then (json=>console.log(json))
-  }
+  const [userData, setUserData] = useState(null);
 
-  useEffect(()=>{
-    getUser()
-  },[])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/user');
+        const jsonData = await response.json();
+        setUserData(jsonData);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+      fetchData();
+    }, []);
 
   return (
     <>

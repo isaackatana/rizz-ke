@@ -64,6 +64,7 @@ body {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        transition: 0.3s ease-in-out;
 
                         &:hover {
                             background-color: #F52C2F;
@@ -246,9 +247,8 @@ body {
                         color: white;
                     }
                 }
-                
             }
-    
+
             .menu-opened {
                 transform: translateX(0%);
             }
@@ -615,6 +615,8 @@ body {
                     color: black;
                     transition: 0.3s;
                     text-decoration: none;
+                    transition: 0.3s ease-in-out;
+
 
                     &:hover {
                         background-color: #383838;
@@ -730,10 +732,11 @@ body {
                             border-radius: 0 0 10px 10px;
                             text-decoration: none;
                             gap: 10px;
+                            transition: 0.3s ease-in-out;
 
                             &:hover {
                                 color: black;
-                                background-color: rgba(255, 255, 255, 0.5);
+                                background-color: white;
                                 text-decoration: underline;
                             }
 
@@ -1078,6 +1081,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                transition: 0.3s ease-in-out;
 
                 &:hover {
                     background-color: #F52C2F;
@@ -1106,86 +1110,91 @@ body {
         }
     }
 
-    .login-page {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.7);
         position: fixed;
         inset: 0;
         z-index: 100;
-        background-color: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-    
-        .login, .register {
-            width: 250px;
-            border-radius: 10px;
-            z-index: 100;
-            padding: 10px;
-            background-color: #F52C2F;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            position: relative;
 
-            svg {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 20px;
-                color: white;
-                cursor: pointer;
-            }
-    
-            h1 {
-                font-size: large;
-                color: white;
-            }
-    
-            form {
+        .login-page {
+            z-index: 100;
+        
+            .login, .register {
+                width: 250px;
+                border-radius: 10px;
+                z-index: 100;
+                padding: 10px;
+                background-color: #F52C2F;
                 display: flex;
                 flex-direction: column;
                 gap: 6px;
+                position: relative;
     
-                div {
+                svg {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 20px;
+                    color: white;
+                    cursor: pointer;
+                }
+        
+                h1 {
+                    font-size: large;
+                    color: white;
+                }
+        
+                form {
                     display: flex;
-                    justify-content: space-between;
-    
-                    button {
+                    flex-direction: column;
+                    gap: 6px;
+        
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+        
+                        button {
+                            padding: 10px;
+                            border-radius: 5px;
+                            border: solid black 1px;
+                        }
+        
+                        input {
+                            width: 100%;
+                        }
+                    }
+        
+                    input {
                         padding: 10px;
                         border-radius: 5px;
                         border: solid black 1px;
                     }
-    
-                    input {
-                        width: 100%;
+        
+                }
+        
+                .switch {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px;
+                    gap: 6px;
+                    color: black;
+                    border: solid black 1px;
+                    border-radius: 5px;
+        
+                    p, a {
+                        font-size: small;
                     }
                 }
-    
-                input {
-                    padding: 10px;
-                    border-radius: 5px;
-                    border: solid black 1px;
-                }
-    
             }
-    
-            .switch {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 5px;
-                gap: 6px;
-                color: black;
-                border: solid black 1px;
-                border-radius: 5px;
-    
-                p, a {
-                    font-size: small;
-                }
+        
+            .register {
+                display: none;
             }
-        }
-    
-        .register {
-            display: none;
         }
     }
 }
