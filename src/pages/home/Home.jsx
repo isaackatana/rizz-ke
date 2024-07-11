@@ -3,6 +3,7 @@ import Blog from '../../components/blog/Blog'
 import DBerry1 from './images/D-Berry1.jpg'
 import DBerry2 from './images/D-Berry2.jpg'
 import IntroVideo from './media/RiZz Media (Intro Video).mp4'
+import { Helmet } from 'react-helmet'
 
 
 function Home() {
@@ -13,6 +14,11 @@ function Home() {
   
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home | RiZz News Media</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <div className="home">
         <div className='hero'>
             <img src={IMAGES[ImageIndex]} alt=""/>

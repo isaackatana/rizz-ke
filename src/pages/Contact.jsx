@@ -1,9 +1,16 @@
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 function Contact() {
   return (
+    <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact | RiZz News Media</title>
+        <link rel="canonical" href="http://isaackatana.com/" />
+    </Helmet>
     <div className='contact'>
         <h1>Contact</h1>
         <div className='container'>
@@ -30,6 +37,7 @@ function Contact() {
           </div>
         </div>
     </div>
+    </>
   )
 }
 
