@@ -35,12 +35,12 @@ function App() {
       <main>
         <Routes>
           <Route path='*' element={<NotFoundPage/>} />
-          <Route path='/front-end/rizz-news-media' element={<Home/>} />
-          <Route path='/front-end/rizz-news-media/contact' element={<Contact/>} />
-          <Route path='/front-end/rizz-news-media/about' element={<About/>} />
+          <Route path='/' element={<Home/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/about' element={<About/>} />
 
-          <Route path='/front-end/rizz-news-media/news/blog-container' element={<BlogContainer/>}/>
-          <Route path='/front-end/rizz-news-media/dashboard' element={<Dashboard/>}/>
+          <Route path='/news/blog-container' element={<BlogContainer/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
       </main>
       <Newsletter/>
