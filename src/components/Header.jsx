@@ -18,7 +18,7 @@ function Header() {
     <header>
         <div className="top-header">
             <div className="wrapper">
-                <Link to='/front-end/rizz-news-media'><img className='logo' src={Logo} alt="" /></Link>
+                <Link to='/rizz-news-media'><img className='logo' src={Logo} alt="" /></Link>
                 <div className="follow-us">
                     <div><FontAwesomeIcon icon={faFacebookF}/></div>
                     <div><FontAwesomeIcon icon={faXTwitter}/></div>
@@ -27,7 +27,7 @@ function Header() {
             </div>
             <div className="nav">
                 <div className="user-profile">
-                    <Link to={'/front-end/rizz-news-media/dashboard'}><FontAwesomeIcon icon={faUser}/></Link>
+                    <Link to={'/rizz-news-media/dashboard'}><FontAwesomeIcon icon={faUser}/></Link>
                 </div>
                 <div>
                     <div className="burger" onClick={toggleMenuBar}>
@@ -40,9 +40,9 @@ function Header() {
         </div>
         <nav>
             <ul className={`menu burger ${MenuBar ? 'menu-opened' : ''}`}>
-                <li><NavLink to='/front-end/rizz-news-media'>Home</NavLink></li>
-                <li><NavLink to='/front-end/rizz-news-media/contact'>Contact</NavLink></li>
-                <li><NavLink to='/front-end/rizz-news-media/about'>About</NavLink></li>
+                <li><NavLink to='/rizz-news-media'>Home</NavLink></li>
+                <li><NavLink to='/rizz-news-media/contact'>Contact</NavLink></li>
+                <li><NavLink to='/rizz-news-media/about'>About</NavLink></li>
             </ul>
         </nav>
     </header>
