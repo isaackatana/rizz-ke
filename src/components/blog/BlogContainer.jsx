@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Helmet } from 'react-helmet'
 import { faFacebookF, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 import Blog from './Blog'
@@ -7,6 +8,12 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 function BlogContainer() {
   return (
     <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Kenyan music is busting with fresh talents  | RiZz News</title>
+            <link rel="com" href="" />
+            <meta property="og:image" content="https://scontent-mba1-1.xx.fbcdn.net/v/t31.18172-8/13320501_1089637717763389_8962331895729566621_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=b895b5&_nc_eui2=AeHa0EjhNmEIH14DFmNz5KU_m5MpVeqV7XKbkylV6pXtcuDuocH4Z2D_XDROgnImLAyYXLKQ79egeHBmu1OxO4gc&_nc_ohc=_2uo_BHpkcsQ7kNvgEcnD0-&_nc_ht=scontent-mba1-1.xx&oh=00_AYD-GiyD-NdNU9Vq5yuYh6c9L_puwdKzSpUpuFiWJCN_Wg&oe=66B77200"></meta>
+        </Helmet>
         <div className='blog-container'>
             <div className='container'>
                 <div className="blog-content">
