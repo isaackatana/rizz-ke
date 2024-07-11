@@ -33,7 +33,7 @@ function BlogList(props) {
             </div>
             <div className="post-title">
                 <h2>{blog.title}</h2>
-                <Link to="/front-end/rizz-news-media/news/blog-container">Read more <FontAwesomeIcon icon={faArrowRight}/></Link>
+                <Link to="/rizz-news-media/news/blog-container">Read more <FontAwesomeIcon icon={faArrowRight}/></Link>
             </div>
             <div className="edit-post">
                 <button onClick={toggleEditBlogModal}><FontAwesomeIcon icon={faEdit}/></button>
