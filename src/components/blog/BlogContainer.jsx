@@ -31,7 +31,7 @@ function BlogContainer() {
 
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ullam et ipsam molestiae animi dicta aperiam enim beatae, dignissimos esse at consequuntur cumque nisi ducimus itaque in voluptates impedit nobis!</p>
 
-                    <video src='' controls></video>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LxcmF_Kk0Ho?si=EuCfRjgSMvZvGpkj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     
                 </div>
                 <div className="share-post">
@@ -63,15 +63,6 @@ function BlogContainer() {
                         <div>
                             <h1>Isaac Katana</h1>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil quod doloribus dolores exercitationem ea voluptatem.</p>
-                        </div>
-                    </div>
-                    <div className="user-comment">
-                        <div className='pp'>
-                            <FontAwesomeIcon icon={faUser}/>
-                        </div>
-                        <div>
-                            <h1>Isaac Katana</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, dolore veritatis! Autem aspernatur tempora veniam rerum aperiam enim voluptatum sed ipsum nihil voluptas, voluptates ab labore aut non totam error!</p>
                         </div>
                     </div>
                 </div>

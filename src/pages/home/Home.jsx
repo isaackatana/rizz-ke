@@ -16,7 +16,7 @@ function Home() {
     <>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>Home | RiZz News Media</title>
+        <title>RiZz News Media</title>
         <meta name="description" content="News Updates on Music, Fashion, Lifestyle and Politics." />
         <meta property="og:image" content="https://media.istockphoto.com/id/508516586/photo/havana-aerial.jpg?s=1024x1024&w=is&k=20&c=L-nE72Z3JcPtoNnGQCnlExz89hkKntAMFX-mMb94V00="></meta>
     </Helmet>
@@ -24,7 +24,7 @@ function Home() {
         <div className='hero'>
             <img src={IMAGES[ImageIndex]} alt=""/>
             <div>
-                <video src={IntroVideo} controls></video>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/bOnqOgCJ7PI?si=I5HozrxGG4HG4etm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
