@@ -16,7 +16,7 @@ function Home() {
     <>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>RiZz News Media</title>
+        <title>RiZz | Entertainment, Sports, Travel, Politics</title>
         <meta name="description" content="News Updates on Music, Fashion, Lifestyle and Politics." />
         <meta property="og:image" content="https://media.istockphoto.com/id/508516586/photo/havana-aerial.jpg?s=1024x1024&w=is&k=20&c=L-nE72Z3JcPtoNnGQCnlExz89hkKntAMFX-mMb94V00="></meta>
     </Helmet>

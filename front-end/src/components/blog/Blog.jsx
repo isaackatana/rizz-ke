@@ -16,25 +16,18 @@ function Blog(props) {
             CreatedAt: new Date(),
             id: 1
         },
-        {
-            Thumbnail: `${DBerry2}`,
-            title: 'Kenyan music is busting with fresh talents from the coast',
-            CreatedAt: new Date(),
-            id: 2
-        },
     ])
 
     return (
         <>
             <div className='blog'>
-                <h1  className="page-title">News</h1>
                 <div className='container'>
                     <div className="categories">
                         <div className="category-list">
                             <a className="active">Latest</a>
-                            <Link to="#">Music</Link>
-                            <Link to="#">Lifestyle</Link>
-                            <Link to="#">Fashion</Link>
+                            <Link to="#">Entertainment</Link>
+                            <Link to="#">Sports</Link>
+                            <Link to="#">Travel</Link>
                             <Link to="#">Politics</Link>
                         </div>
                     </div>

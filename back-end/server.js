@@ -1,50 +1,27 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-
 const app = express();
-const PORT = process.env.PORT || 5000;
+const expressLayouts = require('express-ejs-layouts')
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+const indexRouter = require("./routes/index.js")
 
-// MongoDB connection
-mongoose.connect('mongodb://localhost:27017/users')
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
-
-// Define a schema and model
-const userSchema = new mongoose.Schema({
-  name: String,
-  quantity: Number,
-});
-
-const User = mongoose.model('User', userSchema);
+app.set('view engine', 'ejs');
+app.set('views', __dirname + './views')
+app.set('layout', 'layouts/layout')
+app.use(expressLayouts)
+app.use(express.static('public'))
 
 // Define routes
-app.get('/api/users', async (req, res) => {
-  try {
-    const users = await User.find();
-    res.json(users);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
 
-app.post('/api/users', async (req, res) => {
-  const user = new User({
-    name: req.body.name,
-    quantity: req.body.quantity,
-  });
+app.use('/', indexRouter);
 
-  try {
-    const newUser = await user.save();
-    res.status(201).json(newUser);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-});
+const users = require('./users.js')
+
+app.get('/api/users', (req, res)=>{
+  res.render(users);
+})
 
 // Start the server
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`));

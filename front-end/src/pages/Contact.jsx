@@ -12,7 +12,6 @@ function Contact() {
         <link rel="canonical" href="http://isaackatana.com/" />
     </Helmet>
     <div className='contact'>
-        <h1>Contact</h1>
         <div className='container'>
           <div>
             <div className='direct'>
