@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Blog from '../../components/blog/Blog'
 import DBerry1 from './images/D-Berry1.jpg'
 import DBerry2 from './images/D-Berry2.jpg'
-import IntroVideo from './media/RiZz Media (Intro Video).mp4'
 import { Helmet } from 'react-helmet'
 
 

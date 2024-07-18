@@ -28,7 +28,7 @@ function Footer() {
           <div><FontAwesomeIcon icon={faYoutube}/></div>
         </div>
         <div>
-            <p>©2024 RiZz News Media</p><p>| Hi, Admin <Link onClick={toggleLoginModal}>Logout</Link></p>
+            <p>©2024 RiZz</p><p>| Hi, Admin <Link onClick={toggleLoginModal}>Logout</Link></p>
         </div>
     </footer>
     {LoginModal &&(
