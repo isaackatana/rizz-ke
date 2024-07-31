@@ -6,7 +6,7 @@ function NotFoundPage() {
         <div>
           <h1>404 </h1>
           <div>
-            <p>Page Not Found <br /> Back To <Link to='/rizz-ke'>Home</Link></p>
+            <p>Page Not Found <br /> Back To <Link to='/rizz-media-tv'>Home</Link></p>
           </div>
         </div>
     </div>
